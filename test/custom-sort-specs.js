@@ -46,7 +46,8 @@ describe("Custom Sorting Algorithms", function () {
       },
     ];
 
-    const sortedNames = ageSort(users).map((u) => u.firstName);
+    ageSort(users);
+    const sortedNames = users.map((u) => u.firstName);
     expect(sortedNames).to.deep.equal(["Jane", "John", "Mary", "James"]);
   });
 
